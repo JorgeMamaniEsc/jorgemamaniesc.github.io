@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://jorgemamani.github.io/sitemap.xml
+Sitemap: https://jorgemamaniesc.github.io/sitemap.xml
