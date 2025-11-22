@@ -9,6 +9,7 @@ body {
   line-height: 1.6;
 }
 
+
 header {
   background: linear-gradient(135deg, #004b8d, #0062a8);
   color: white;
@@ -22,6 +23,7 @@ header h1 {
   margin: 0;
   color: #e0ecff; 
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  letter-spacing: 1px;
 }
 
 header h2 {
@@ -53,12 +55,14 @@ header .links a:hover {
   transform: translateY(-2px);
 }
 
+
 main {
   max-width: 950px;
   margin: 3rem auto;
   background: #ffffff;
   padding: 3rem;
   border-radius: 18px;
+  border: 1px solid #d2e6f5;
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
 }
 
@@ -66,6 +70,7 @@ h1, h2, h3 {
   color: #004b8d;
   margin-bottom: 1rem;
 }
+
 
 #perfil .perfil-contenedor {
   display: flex;
@@ -102,26 +107,56 @@ ul {
   padding-left: 1.5rem;
 }
 
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
+  gap: 1.7rem;
   margin-top: 1.5rem;
 }
 
 .skill {
   background-color: #f9fcff;
-  border-left: 5px solid #00b4d8;
-  padding: 1.2rem;
-  border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-left: 5px solid #0077b6;
+  padding: 1.3rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.25s ease;
 }
 
 .skill:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  background-color: #e9f6ff;
 }
+
+
+#proyectos h2 {
+  margin-bottom: 1.2rem;
+  color: #0062a8;
+}
+
+.proyecto {
+  background: #f8fbff;
+  padding: 1.7rem;
+  border-radius: 14px;
+  border-left: 6px solid #00b4d8;
+  margin: 1.2rem 0;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+  transition: all 0.25s ease;
+}
+
+.proyecto:hover {
+  background: #e3f6ff;
+  transform: translateX(6px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.proyecto h3 {
+  margin-top: 0;
+  color: #0096c7;
+}
+
 
 #companeros ul {
   list-style-type: none;
@@ -130,7 +165,7 @@ ul {
 
 #companeros li {
   background-color: #f8fbff;
-  border-left: 4px solid #00b4d8;
+  border-left: 4px solid #0096c7;
   margin: 0.6rem 0;
   padding: 0.8rem 1rem;
   border-radius: 8px;
@@ -143,6 +178,73 @@ ul {
   transform: translateX(4px);
 }
 
+
+#profesores {
+  margin-top: 3rem;
+}
+
+#profesores h2 {
+  color: #0077b6;
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+}
+
+#profesores ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
+}
+
+#profesores li {
+  background: #f0f9ff;
+  border-left: 5px solid #0096c7;
+  padding: 1.2rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+#profesores li::before {
+  content: "⟶";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%) translateX(-6px);
+  font-size: 1.4rem;
+  color: #00b4d8;
+  opacity: 0;
+  transition: all 0.25s ease;
+}
+
+#profesores li:hover {
+  background: #e1f6ff;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  border-left-color: #00b4d8;
+}
+
+#profesores li:hover::before {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0px);
+}
+
+#profesores a {
+  color: #0077b6;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+#profesores a:hover {
+  text-decoration: underline;
+}
+
+
 footer {
   text-align: center;
   padding: 1.3rem;
@@ -152,6 +254,7 @@ footer {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
+
 
 @media (max-width: 700px) {
   main {
